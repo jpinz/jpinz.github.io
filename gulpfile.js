@@ -19,7 +19,7 @@ const commonjs = require('rollup-plugin-commonjs')
 const resolve  = require('rollup-plugin-node-resolve')
 const uglify   = require('rollup-plugin-uglify')
 const rucksack = require('rucksack-css')
-const deploy   = require('gulp-gh-pages')
+// const deploy   = require('gulp-gh-pages')
 
 // error handler
 
