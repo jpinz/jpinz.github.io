@@ -19,7 +19,7 @@ const commonjs = require('rollup-plugin-commonjs')
 const resolve  = require('rollup-plugin-node-resolve')
 const uglify   = require('rollup-plugin-uglify')
 const rucksack = require('rucksack-css')
-// const deploy   = require('gulp-gh-pages')
+const deploy   = require('gulp-gh-pages-will')
 
 // error handler
 
@@ -116,7 +116,7 @@ gulp.task('images', () => {
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', ['build'], function () {
+gulp.task('deploy', () => {
     return gulp.src("./dist/**/*")
         .pipe(deploy({
             remoteUrl: "https://github.com/jpinz/jpinz.github.io.git",
