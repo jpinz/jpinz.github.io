@@ -118,9 +118,11 @@ gulp.task('images', () => {
  */
 gulp.task('deploy', ['build'], function () {
     return gulp.src("./dist/**/*")
-        .pipe(deploy())
+        .pipe(deploy({
+            remoteUrl: "https://github.com/jpinz/jpinz.github.io.git",
+            branch: "master"
+        }))
 });
-
 // fonts, videos, favicon
 
 const others = [
