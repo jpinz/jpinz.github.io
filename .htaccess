@@ -1,8 +1,0 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(www\.jpinz\.me)(:80)? [NC]
-RewriteRule ^(.*) http://jpinz.me/$1 [R=301,L]
-DirectoryIndex index.html altindex.html      
-order deny,allow
