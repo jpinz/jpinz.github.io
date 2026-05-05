@@ -1,0 +1,32 @@
+---
+const links = [
+  { href: 'https://github.com/jpinz', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/jpinzer/', label: 'LinkedIn' },
+  { href: 'https://bsky.app/profile/jpinzer.me', label: 'Bluesky' },
+  { href: 'mailto:contact@jpinzer.me', label: 'Email' },
+];
+---
+
+<section id="contact" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-8">
+    <h2 class="text-3xl font-bold mb-10 text-gray-900">
+      Get in Touch
+      <span class="block w-12 h-0.5 bg-brand mt-2 rounded-full"></span>
+    </h2>
+    <p class="text-lg text-gray-500 mb-8">Feel free to reach out if you'd like to connect.</p>
+    <ul class="flex flex-wrap gap-4">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block text-sm font-medium text-brand px-5 py-2.5 rounded-md border border-brand hover:bg-brand hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/30 transition-all duration-200"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
