@@ -12,9 +12,11 @@
   "license": "ISC",
   "description": "Personal website",
   "dependencies": {
-    "astro": "^6.0.0",
     "@tailwindcss/vite": "^4.0.0",
+    "astro": "^6.0.0",
     "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.2"
   }
 }
-
