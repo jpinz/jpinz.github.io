@@ -1,0 +1,36 @@
+---
+const jobs = [
+  {
+    company: 'Microsoft',
+    role: 'Software Engineer — Dependabot & Container Security',
+    date: 'Current',
+  },
+  {
+    company: 'Blink',
+    role: 'Software Engineering Intern',
+    date: 'Previously',
+  },
+];
+---
+
+<section id="work" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-8">
+    <h2 class="text-3xl font-bold mb-10 text-gray-900">
+      Experience
+      <span class="block w-12 h-0.5 bg-brand mt-2 rounded-full"></span>
+    </h2>
+    <div class="flex flex-col gap-6">
+      {jobs.map((job) => (
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-brand hover:shadow-md transition-all duration-200">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">{job.company}</h3>
+              <p class="text-sm text-gray-500">{job.role}</p>
+            </div>
+            <span class="text-xs font-medium text-gray-400 whitespace-nowrap">{job.date}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

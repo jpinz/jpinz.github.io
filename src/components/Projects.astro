@@ -1,0 +1,76 @@
+---
+const featured = {
+  title: 'CardMystic',
+  href: 'https://cardmystic.com',
+  description: 'An AI-powered Magic: The Gathering card search engine. Find cards using natural language queries instead of exact keywords — just describe what you\'re looking for and let the AI handle the rest.',
+  tags: ['Nuxt / Vue', 'AI Search', 'Open Source'],
+};
+
+const projects = [
+  {
+    title: 'Guest Management System',
+    href: 'https://github.com/jpinz/guest-management',
+    description: 'Development, Design, UX',
+    tag: 'Open Source',
+  },
+  {
+    title: 'React Native Modal',
+    href: 'https://github.com/react-native-community/react-native-modal',
+    description: 'Open Source Contributor',
+    tag: 'Open Source',
+  },
+  {
+    title: 'WPI Calendar Exporter',
+    href: 'https://github.com/jpinz/WPIBannerWebICSExporter',
+    description: 'Development',
+    tag: 'Open Source',
+  },
+  {
+    title: 'Unsplash Wallpaper',
+    href: 'https://github.com/jpinz/UnsplashWallpaper',
+    description: 'Development',
+    tag: 'Open Source',
+  },
+];
+---
+
+<section id="projects" class="py-24">
+  <div class="max-w-4xl mx-auto px-8">
+    <h2 class="text-3xl font-bold mb-10 text-gray-900">
+      Projects
+      <span class="block w-12 h-0.5 bg-brand mt-2 rounded-full"></span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Featured Project -->
+      <a
+        href={featured.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="col-span-full p-8 rounded-lg border border-brand bg-gradient-to-br from-brand-light to-white hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-200 block"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">{featured.title}</h3>
+        <p class="text-sm text-gray-600 mb-4 leading-relaxed">{featured.description}</p>
+        <div class="flex flex-wrap gap-2">
+          {featured.tags.map((tag) => (
+            <span class="text-xs font-medium text-brand bg-brand/10 px-3 py-1 rounded-full">{tag}</span>
+          ))}
+        </div>
+      </a>
+
+      <!-- Other Projects -->
+      {projects.map((project) => (
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-6 rounded-lg border border-gray-100 bg-white hover:-translate-y-1 hover:border-brand hover:shadow-lg hover:shadow-black/5 transition-all duration-200 block"
+        >
+          <h3 class="text-base font-semibold text-gray-900 mb-2">{project.title}</h3>
+          <p class="text-sm text-gray-500 mb-4">{project.description}</p>
+          <span class="text-xs font-medium text-brand bg-brand/10 px-3 py-1 rounded-full">{project.tag}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
