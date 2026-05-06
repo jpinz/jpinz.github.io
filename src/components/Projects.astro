@@ -8,10 +8,16 @@ const featured = {
 
 const projects = [
   {
+    title: 'Circle Game',
+    href: 'https://circlega.me',
+    description: 'An Augmented-Reality Game that uses your device's camera to track your index finger in mid-air. Draw a circle in the air and get scored on how close it is to a perfect circle!',
+    tags: ['Open Source', 'Game', 'Vibe-Coded'],
+  },
+  {
     title: 'dependabot-core',
     href: 'https://github.com/dependabot/dependabot-core/commits/main/?author=jpinz',
-    description: 'Open Source Contributor',
-    tag: 'Open Source',
+    description: 'Dependabot's core logic for creating update PRs.',
+    tags: ['Open Source'],
   }
 ];
 ---
@@ -50,7 +56,11 @@ const projects = [
         >
           <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{project.description}</p>
-          <span class="text-xs font-medium text-brand bg-brand/10 px-3 py-1 rounded-full">{project.tag}</span>
+          <div class="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span class="text-xs font-medium text-brand bg-brand/10 px-3 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
         </a>
       ))}
     </div>
