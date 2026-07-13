@@ -9,7 +9,13 @@ const links = [
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-gray-50/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-black/5 dark:border-white/10">
   <nav class="max-w-4xl mx-auto px-8 py-4 flex items-center justify-between">
-    <a href="/" class="text-2xl font-bold text-brand tracking-tight">JP</a>
+    <a href="/" class="inline-flex items-center" aria-label="Julian Pinzer home">
+      <span
+        class="block h-9 w-9 bg-brand dark:bg-brand-light transition-colors duration-200"
+        style="-webkit-mask: url('/icon.png') center / contain no-repeat; mask: url('/icon.png') center / contain no-repeat;"
+      ></span>
+      <span class="sr-only">Julian Pinzer</span>
+    </a>
     <div class="flex items-center gap-6">
       <ul class="flex gap-8">
         {links.map((link) => (
